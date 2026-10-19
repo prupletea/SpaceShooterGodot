@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://oe3tyfhob7gr"]
+
+[ext_resource type="PackedScene" uid="uid://b1kayrjvy3fd" path="res://scenes/player.tscn" id="1_2q6dc"]
+[ext_resource type="Texture2D" uid="uid://dinv3573tig2u" path="res://graphics/sky.png" id="2_w7c3h"]
+[ext_resource type="PackedScene" uid="uid://dd5g34poajjhi" path="res://scenes/meteor.tscn" id="3_w8frs"]
+
+[node name="Level" type="Node2D" unique_id=1360311288]
+
+[node name="Player" parent="." unique_id=456735982 instance=ExtResource("1_2q6dc")]
+top_level = true
+position = Vector2(46667, 45081)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1713162986]
+position = Vector2(46976, 24192.004)
+scale = Vector2(10, 10)
+texture = ExtResource("2_w7c3h")
+
+[node name="Meteor" parent="." unique_id=667788012 instance=ExtResource("3_w8frs")]
