@@ -5,4 +5,5 @@
 [node name="Meteor" type="Node2D" unique_id=667788012]
 
 [node name="MeteorSprite" type="Sprite2D" parent="." unique_id=1104949664]
+scale = Vector2(0.025, 0.025)
 texture = ExtResource("1_tcwo0")

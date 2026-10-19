@@ -6,13 +6,13 @@
 
 [node name="Level" type="Node2D" unique_id=1360311288]
 
-[node name="Player" parent="." unique_id=456735982 instance=ExtResource("1_2q6dc")]
-top_level = true
-position = Vector2(46667, 45081)
-
 [node name="Background" type="Sprite2D" parent="." unique_id=1713162986]
-position = Vector2(46976, 24192.004)
-scale = Vector2(10, 10)
+position = Vector2(638.00006, 352.00003)
+scale = Vector2(0.13508217, 0.13670476)
 texture = ExtResource("2_w7c3h")
 
 [node name="Meteor" parent="." unique_id=667788012 instance=ExtResource("3_w8frs")]
+position = Vector2(235, 122)
+
+[node name="Player" parent="." unique_id=456735982 instance=ExtResource("1_2q6dc")]
+position = Vector2(74, 628)
