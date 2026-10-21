@@ -4,6 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://dinv3573tig2u" path="res://graphics/sky.png" id="2_w7c3h"]
 [ext_resource type="PackedScene" uid="uid://dd5g34poajjhi" path="res://scenes/meteor.tscn" id="3_w8frs"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x41q1"]
+size = Vector2(28, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
+size = Vector2(1280, 20)
+
 [node name="Level" type="Node2D" unique_id=1360311288]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1713162986]
@@ -11,8 +17,34 @@ position = Vector2(638.00006, 352.00003)
 scale = Vector2(0.13508217, 0.13670476)
 texture = ExtResource("2_w7c3h")
 
+[node name="Player" parent="." unique_id=456735982 instance=ExtResource("1_2q6dc")]
+position = Vector2(650, 650)
+
+[node name="Border" type="Node2D" parent="." unique_id=1378376102]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Border" unique_id=1380505557]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/StaticBody2D" unique_id=138808417]
+position = Vector2(1294, 360)
+shape = SubResource("RectangleShape2D_x41q1")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Border" unique_id=1343903421]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/StaticBody2D2" unique_id=1881895214]
+position = Vector2(-14, 360)
+shape = SubResource("RectangleShape2D_x41q1")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Border" unique_id=1881895186]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/StaticBody2D3" unique_id=707445606]
+position = Vector2(640, -10)
+shape = SubResource("RectangleShape2D_w8frs")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Border" unique_id=226081408]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/StaticBody2D4" unique_id=1445543616]
+position = Vector2(640, 730)
+shape = SubResource("RectangleShape2D_w8frs")
+
 [node name="Meteor" parent="." unique_id=667788012 instance=ExtResource("3_w8frs")]
 position = Vector2(235, 122)
-
-[node name="Player" parent="." unique_id=456735982 instance=ExtResource("1_2q6dc")]
-position = Vector2(74, 628)

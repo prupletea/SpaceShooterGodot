@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://l4ul31vcln42"]
+
+[ext_resource type="Texture2D" uid="uid://1lh68x0on6js" path="res://graphics/laserbeam.png" id="1_xmihv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x41q1"]
+size = Vector2(15, 80)
+
+[node name="laser" type="Area2D" unique_id=1667590169]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1072772328]
+position = Vector2(7, 2.0000005)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_xmihv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=601512715]
+position = Vector2(-0.5, 2)
+shape = SubResource("RectangleShape2D_x41q1")
